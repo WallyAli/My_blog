@@ -1,0 +1,11 @@
+
+<p><%= content_tag(:strong, @post.title) %></p>
+ 
+<p><%= @post.content %></p>
+
+ 
+<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post) %>
+
+<h2>Add a comment:</h2>
+

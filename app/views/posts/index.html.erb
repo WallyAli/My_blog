@@ -1,0 +1,7 @@
+<h3>This is the posts index page</h3>
+
+<% @posts.each do |post| %>
+	
+		<p><%= link_to content_tag(:strong, post.title), post_path(post) %></p>
+		<%= post.content %>
+<% end %>
