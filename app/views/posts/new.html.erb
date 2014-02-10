@@ -1,0 +1,19 @@
+<%= form_for @post do |post| %>
+  
+    <%= render 'shared/errors' %>
+
+    <p>
+      <%= post.label :title %><br>
+      <%= post.text_field :title, cols: 40, rows: 5 %>
+    </p>
+   
+    <p>
+      <%= post.label :content %><br>
+      <%= post.text_area :content, cols: 80, rows: 20 %>
+    </p>
+   
+    <p>
+      <%= post.submit %>
+      <%= link_to 'Cancel',  posts_path %>
+    </p>
+<% end %>

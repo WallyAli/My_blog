@@ -1,0 +1,9 @@
+
+
+
+<p><%= content_tag :strong, :commenter %></p>
+
+<%= content_tag :p, comment.body %>
+
+<%= link_to 'Delete comment', [comment.post, comment], 
+        method: :delete, data: { confirm: 'Are you sure?' } %>
