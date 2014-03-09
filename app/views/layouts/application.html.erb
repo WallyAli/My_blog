@@ -5,14 +5,21 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print"> 
+<!--[if lt IE 8]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+
 </head>
-<body>
+  <body>
+    <%= render 'shared/navbar' %>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'New', new_post_path %>
+     <%= yield %>
 
+    <%= render 'shared/footer' %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>
+

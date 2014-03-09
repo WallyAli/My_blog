@@ -1,7 +1,8 @@
 
 
 
-<p><%= content_tag :strong, :commenter %></p>
+<p><%= content_tag :strong, comment.commenter %></p>
+<p><em>created <%= time_ago_in_words(comment.created_at) %> ago</em></p>
 
 <%= content_tag :p, comment.body %>
 
