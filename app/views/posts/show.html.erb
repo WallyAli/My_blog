@@ -1,24 +1,33 @@
 <div class="container post">
-    <div class="row">
-        <div class="col-xs-12 col-md-8">
-    			<p><%= content_tag(:strong, @post.title) %></p>
-    			<p><%= @post.content %></p>
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="page-header">
+            <p><%= content_tag(:strong, @post.title) %></p>
+            <p><%= @post.content %></p>
 
-          <%= link_to 'Back', posts_path %>
-          <%= link_to 'Edit', edit_post_path(@post) %>
-          <%= link_to 'Delete', post_path(@post), method: 
-                      :delete, data: { confirm: 'Are you sure?' }  %>
+            <%= link_to 'Back', posts_path %>
+            <%= link_to 'Edit', edit_post_path(@post) %>
+            <%= link_to 'Delete', post_path(@post), method: 
+            :delete, data: { confirm: 'Are you sure?' }  %>
 
 
-          <h4>Recent Comments:</h4>
+            <h4>Recent Comments:</h4>
 
-          <%= render @post.comments %>
+            <%= render @post.comments %>
 
-          <h2>Add a comment:</h2>
+            <h2>Add a comment:</h2>
 
-          <%= render 'comments/form'%>
+            <%= render 'comments/form'%>
+          </div>
         </div>
+      </div>
     </div>
+
+      <%= render 'shared/sidebar' %> 
+
+  </div>
 </div>
 
 
