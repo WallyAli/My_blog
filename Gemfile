@@ -5,7 +5,6 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 gem 'gravatar_image_tag'
 gem 'devise'
-gem 'protected_attributes'
 
 
 # Use sqlite3 as the database for Active Record

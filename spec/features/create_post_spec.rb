@@ -6,7 +6,7 @@ describe "Creating a new post" do
 		visit root_path
 		click_link 'New'
 
-		fill_in "Title", :with => "First Tested Article"
+		fill_in "title", :with => "First Tested Article"
 		fill_in "Content", :with => "Magna mollit enim, 
 		trust fund officia elit American Apparel
 		 XOXO PBR&B polaroid. Pour-over nesciunt bespoke, 

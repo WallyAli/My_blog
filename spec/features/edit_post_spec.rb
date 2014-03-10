@@ -12,10 +12,10 @@ describe "Editing a post" do
 		expect(current_path).to eq(edit_post_path(post))
 		expect(find_field('Title').value).to eq(post.title)
 
-		fill_in 'Title', with: 'Updated Title'
+		fill_in 'Title', with: 'Updated Post Title'
 		click_button 'Update Post'
 		expect(current_path).to eq(post_path(post))
-		expect(page).to have_text('Updated Title')
+		expect(page).to have_text('Updated Post Title')
 
 	end
 end
