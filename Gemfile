@@ -39,6 +39,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'annotate', ">=2.6.0"
+  gem 'jazz_hands'
+  gem 'better_errors'
+  gem 'quiet_assets'
 end
 
 group :test do
