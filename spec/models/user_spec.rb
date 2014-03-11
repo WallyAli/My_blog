@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+	it "requires title" do
+		post = Post.new(title: '')
+
+		expect(post.errors[:title].any?).to be_true
+	end
 end
