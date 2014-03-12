@@ -1,7 +1,21 @@
 /* this is my custom styling */
 
-@import "../stylesheets/bootstrap.css";
-nav .navbar
-{
-    background-color: #5e00ff;
+@import "../bootstrap.css";
+
+.navbar {
+	background: #006666;
+	margin-bottom: 5px;
+}
+
+.jumbotron {
+	background: #0AAD93;
+	border:5px solid gray;
+
+}
+
+.jumbotron .container h4 {
+	font-weight: bold;
+}
+.jumbotron .gravatar {
+
 }
