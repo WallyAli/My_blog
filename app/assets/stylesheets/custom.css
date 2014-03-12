@@ -1,0 +1,7 @@
+/* this is my custom styling */
+
+@import "../stylesheets/bootstrap.css";
+nav .navbar
+{
+    background-color: #5e00ff;
+}
