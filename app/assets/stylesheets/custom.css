@@ -21,12 +21,16 @@ body {
 	padding-top: 0px;
 	height: 115px;
 	margin-bottom: 10px;
-	
-
 }
 
 .jumbotron .container h4 {
 	font-weight: bold;
+}
+
+.jumbotron .pull-left h4{
+
+	color: #9A1CD5;
+	text-align: center;
 }
 
 .right-side {
@@ -41,5 +45,5 @@ body {
 }
 
 .right-side p a {
-	color: black;
+	color: #215FE2;
 }
