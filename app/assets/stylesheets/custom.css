@@ -10,12 +10,14 @@
 .jumbotron {
 	background: #0AAD93;
 	border:5px solid gray;
+	padding-top: 0px;
+	height: 115px;
+	margin-bottom: 15px;
+	
 
 }
 
 .jumbotron .container h4 {
 	font-weight: bold;
 }
-.jumbotron .gravatar {
 
-}
