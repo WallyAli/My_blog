@@ -23,14 +23,12 @@ body {
 	margin-bottom: 10px;
 }
 
-.jumbotron .container h4 {
+.jumbotron div h4 {
 	font-weight: bold;
-}
-
-.jumbotron .pull-left h4{
-
 	color: #9A1CD5;
 	text-align: center;
+	position: fixed;
+	float: left;
 }
 
 .right-side {
