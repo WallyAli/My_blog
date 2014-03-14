@@ -5,7 +5,7 @@
     <div class="col-xs-6 col-sm-6">
       <% @posts.each do |post| %>
       <p><%= link_to content_tag(:strong, post.title), post_path(post) %></p>
-      <%= simple_format(post.content) %>
+      <p class="content"><%= simple_format(post.content) %></p>
       <% end %>
     </div>
 
