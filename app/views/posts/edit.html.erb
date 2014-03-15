@@ -4,17 +4,17 @@
 
   <p>
     <%= post.label :title %><br>
-    <%= post.text_field :title, cols: 40, rows: 5 %>
+    <%= post.text_field :title, class: 'title' %>
   </p>
  
   <p>
     <%= post.label :content %><br>
-    <%= post.text_area :content, cols: 80, rows: 20 %>
+    <%= post.text_area :content, cols: 80, rows: 20, class: 'content' %>
   </p>
  
   <p>
     <%= post.submit %>
+    <%= link_to 'Back', posts_path %>
   </p>
 <% end %>
  
-<%= link_to 'Back', posts_path %>

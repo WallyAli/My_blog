@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
 	def index
-		@posts = Post.all.order(updated_at: :desc) 
+		@posts = Post.search(params[:search])
 	end
 
 	def show
@@ -43,7 +43,6 @@ class PostsController < ApplicationController
 		@post.destroy
 		redirect_to posts_path
 	end
-
 
 
 	private
