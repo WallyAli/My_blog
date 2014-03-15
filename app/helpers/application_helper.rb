@@ -1,4 +1,8 @@
 module ApplicationHelper
+	ActionView::Helpers::UrlHelper
+
+	require 'rss'
+	require 'open-uri'
 
 	def gravatar_for(user)
 		gravatar_id = Digest::MD5.hexdigest(user)
@@ -15,4 +19,11 @@ module ApplicationHelper
 			""
 		end
 	end
+
+	def blog_feed
+		url = "http://feeds.mashable.com/mashable/tech"
+		rss = RSS::Parser.parse(url, false)
+		link_to rss.items.first.title, rss.items.first.link 
+	end
 end
+	
