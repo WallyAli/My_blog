@@ -17,13 +17,15 @@
             :delete, data: { confirm: 'Are you sure?' }  %>
 
 
-            <h4>Recent Comments:</h4>
+          <%= render 'shared/disqus' %>
+
+<!--             <h4>Recent Comments:</h4>
 
             <%= render @post.comments %>
 
             <h2>Add a comment:</h2>
 
-            <%= render 'comments/form'%>
+            <%= render 'comments/form'%> -->
 
           </div>
         </div>
