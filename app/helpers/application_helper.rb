@@ -25,5 +25,18 @@ module ApplicationHelper
 		rss = RSS::Parser.parse(url, false)
 		link_to rss.items.first.title, rss.items.first.link 
 	end
+
+	def login(user)
+		if  user_signed_in?
+			link_to 'Logout', logout_path 
+		else
+			link_to 'Login', login_path 
+		end 
+	end
+
+	def edit_profile(user)
+		link_to 'Edit Profile', edit_user_registration_path if user_signed_in?
+	end
 end
+
 	
