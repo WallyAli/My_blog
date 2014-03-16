@@ -6,6 +6,9 @@
         <% @posts.each do |post| %>
         <h4><%= link_to content_tag(:strong, post.title), post %></h4>
         <p>
+        <p class="date">
+          <%= post.created_at.strftime('%b %d, %Y') %>
+        </p>
           <%= simple_format(truncate(post.content, length: 400, separator: ' ')) %>
           <%= link_to '...Read More...', post %> 
         </p>
@@ -17,3 +20,4 @@
     </div>
   </div>
 </div>
+

@@ -71,3 +71,9 @@ body {
 .profile-name {
 	color: #fff;
 }
+
+.date {
+	color: #6E6E6E;
+	font-size: 1.0em;
+	margin: 4px 0;
+}
