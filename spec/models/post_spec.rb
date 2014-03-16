@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Post do 
-	it 'must have a title' do 
+	it 'requires a title' do 
 		post = Post.new(title: '', content: 'article content')
 		post.should_not be_valid
 	end
@@ -21,5 +21,11 @@ describe Post do
 		
 		expect { post.destroy }.to change { Post.count }.from(1).to(0) 
 	end
+
+	it "responds to title" do 
+		subject.should respond_to(:title)
+	end
+
+	it { should respond_to(:content) }
 
 end
