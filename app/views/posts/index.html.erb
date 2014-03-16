@@ -1,14 +1,16 @@
-<div class="container">
-  <div class="row">
+<div class="wrap">
+  <div class="container panel-body">
+    <div class="row">
 
-    <div class="col-xs-6 col-sm-6">
-      <% @posts.each do |post| %>
-      <p><%= link_to content_tag(:strong, post.title), post_path(post) %></p>
-      <p class="content"><%= simple_format(post.content) %></p>
-      <% end %>
+      <div class="col-xs-6 col-sm-8 content">
+        <% @posts.each do |post| %>
+        <h4><%= link_to content_tag(:strong, post.title), post_path(post) %></h4>
+        <p><%= simple_format(post.content) %></p>
+        <% end %>
+      </div>
+
+      <%= render 'shared/rightsidebar' %> 
+
     </div>
-
-    <%= render 'shared/rightsidebar' %> 
-
   </div>
 </div>

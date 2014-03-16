@@ -20,7 +20,7 @@ def self.search(search)
 	if search
 		find(:all, :conditions => ['content LIKE ?', "%#{search}%"])
 		else
-		find(:all)  
+		Post.order(created_at: :desc)   
 		end
 	end
 end

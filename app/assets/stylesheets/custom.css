@@ -13,14 +13,16 @@ body {
 .navbar {
 	background: #7C0556;
 	margin-bottom: 5px;
+	border-radius: 5px;
 }
 
 .jumbotron {
-	background: #1AF5E3;
-	border:5px solid gray;
+	background: #050504;
+	border: 3px solid #15B8EC;
 	padding-top: 0px;
 	height: 115px;
 	margin-bottom: 10px;
+	border-radius: 5px;
 }
 
 .jumbotron div h4 {
@@ -34,7 +36,10 @@ body {
 .right-side {
 	background: #0BC7A1;
 	margin-bottom: 10px;
-	border:5px solid gray;
+	border: 3px solid #15B8EC;
+	height: 590px;
+	position: relative;
+	border-radius: 5px;
 }
 
 .right-side h4 {
@@ -48,15 +53,21 @@ body {
 
 .title {
 	width: 750px;
-	border: 5px solid gray;
+	border: 3px solid #15B8EC;
+	border-radius: 5px;
 }
 
 .content {
-	border: 5px solid gray;
+	border: 3px solid #15B8EC;
+	border-radius: 5px;
+
 
 }
 
 .commenter {
 	width: 390px;
-	border: 5px solid gray;
+	border: 3px solid gray;
+}
+.profile-name {
+	color: #fff;
 }
