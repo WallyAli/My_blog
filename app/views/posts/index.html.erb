@@ -4,8 +4,11 @@
 
       <div class="col-xs-6 col-sm-8 content">
         <% @posts.each do |post| %>
-        <h4><%= link_to content_tag(:strong, post.title), post_path(post) %></h4>
-        <p><%= simple_format(post.content) %></p>
+        <h4><%= link_to content_tag(:strong, post.title), post %></h4>
+        <p>
+          <%= simple_format(truncate(post.content, length: 400, separator: ' ')) %>
+          <%= link_to '...Read More...', post %> 
+        </p>
         <% end %>
       </div>
 
