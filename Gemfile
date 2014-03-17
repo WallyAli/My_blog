@@ -6,7 +6,7 @@ gem 'rails', '4.0.2'
 gem 'gravatar_image_tag'
 gem 'devise'
 gem 'pg'
-
+gem 'rinku'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets

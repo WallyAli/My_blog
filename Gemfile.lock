@@ -190,6 +190,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.1)
       json (~> 1.4)
+    rinku (1.7.3)
     rspec (3.0.0.beta2)
       rspec-core (= 3.0.0.beta2)
       rspec-expectations (= 3.0.0.beta2)
@@ -286,6 +287,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.0.2)
   rails_12factor
+  rinku
   rspec (~> 3.0.0.beta2)
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 4.0.0)

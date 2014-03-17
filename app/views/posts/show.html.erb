@@ -14,7 +14,7 @@
              <p class="date">
               <%= @post.created_at.strftime('%b %d, %Y') %>
             </p>
-            <p><%= simple_format(@post.content) %></p>
+            <p><%= parse_urls(@post.content) %></p>
 
             <%= link_to 'Back', posts_path %>
             <%= link_to 'Edit', edit_post_path(@post) %>

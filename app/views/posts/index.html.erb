@@ -9,7 +9,7 @@
         <p class="date">
           <%= post.created_at.strftime('%b %d, %Y') %>
         </p>
-          <%= simple_format(truncate(post.content, length: 400, separator: ' ')) %>
+          <%= truncate(parse_urls(post.content), length: 300, separator: ' ', escape: false) %>
           <%= link_to '...Read More...', post %> 
         </p>
         <% end %>
