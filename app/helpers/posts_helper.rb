@@ -5,5 +5,4 @@ module PostsHelper
 	def parse_urls(text)	
 		simple_format(Rinku.auto_link(text))
 	end
-
 end

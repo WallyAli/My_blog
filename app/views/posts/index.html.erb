@@ -10,7 +10,7 @@
           <%= post.created_at.strftime('%b %d, %Y') %>
         </p>
           <%= truncate(parse_urls(post.content), length: 300, separator: ' ', escape: false) %>
-          <%= link_to '...Read More...', post %> 
+          <%= link_to '--Read More--', post %> 
         </p>
         <% end %>
       </div>
