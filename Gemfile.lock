@@ -191,7 +191,6 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     redcarpet (3.1.1)
-    rinku (1.7.3)
     rspec (3.0.0.beta2)
       rspec-core (= 3.0.0.beta2)
       rspec-expectations (= 3.0.0.beta2)
@@ -289,7 +288,6 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor
   redcarpet
-  rinku
   rspec (~> 3.0.0.beta2)
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 4.0.0)
