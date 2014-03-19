@@ -7,5 +7,5 @@ def post_attributes(overrides = {})
 		small batch iPhone kogi quis Brooklyn tote 
 		bag biodiesel cardigan synth." 
 	}.merge(overrides)
-	
 end
+

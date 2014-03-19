@@ -2,10 +2,18 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.search(params[:search])
+		respond_to do |format|
+    		format.html
+    		format.json { render json: @posts }
+    	end
 	end
 
 	def show
     	@post = Post.find(params[:id])
+    	respond_to do |format|
+    		format.html
+    		format.json { render json: @post }
+    	end
 	end
 
 	def new
@@ -14,10 +22,14 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		if @post.save
-			redirect_to @post, notice: "Post successfully created!" 
-		else
-			render :new
+		respond_to do |format|
+			if @post.save
+				format.html { redirect_to @post, notice: "Post successfully created!" }
+	        	format.json { render action: 'show', status: :created, location: @post }
+			else
+				format.html { render action: 'new' }
+		        format.json { render json: @post.errors, status: :unprocessable_entity }
+			end
 		end
 	end
 
@@ -27,10 +39,13 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
-		if @post.update(post_params)
-			redirect_to @post, notice: "updated"
-		else
-			render :edit
+		respond_to do |format|
+			if  format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+		        format.json { head :no_content }
+			else
+				format.html { render :edit }
+	        	format.json { render json: @post.errors, status: :unprocessable_entity }
+			end
 		end
 	end
 
@@ -41,7 +56,10 @@ class PostsController < ApplicationController
 	def destroy
 		@post = Post.find(params[:id])
 		@post.destroy
-		redirect_to posts_path
+		respond_to do |format|
+      		format.html { redirect_to posts_path }
+      		format.json { head :no_content }
+		end
 	end
 
 

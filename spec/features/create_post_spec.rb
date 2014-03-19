@@ -5,20 +5,14 @@ describe "Creating a new post" do
 	it "saves the post and shows the new post's details" do
 		visit root_path
 		click_link 'New'
+		expect(current_path).to eq(new_post_path)
+		
+		fill_in 'Title', with: post_attributes[:title]
+		fill_in 'Content', with: post_attributes[:content]
 
-		fill_in "Title", :with => "First Tested Article"
-		fill_in "Content", :with => "Magna mollit enim, 
-		trust fund officia elit American Apparel
-		 XOXO PBR&B polaroid. Pour-over nesciunt bespoke, 
-		 bicycle rights ex officia small batch iPhone kogi quis 
-		 Brooklyn tote bag biodiesel cardigan synth. 
-		 Banksy cred forage Austin, semiotics VHS velit gluten-free 
-		 American Apparel magna next level. Butcher synth elit, 
-		 kogi fanny pack hoodie veniam laborum mustache. "
-
-		 click_button 'Create Post'
-		 expect(current_path).to eq(post_path(Post.last))
-		 expect(page).to have_text("First Tested Article")
+		click_button 'Submit'
+		expect(current_path).to eq(post_path(Post.last))
+		expect(page).to have_text("My Article")
 
 	end
 end
