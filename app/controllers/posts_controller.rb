@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :get_post, only: [:edit, :update, :delete, :destroy, :show]
 
 	def index
 		@posts = Post.search(params[:search])
@@ -9,7 +10,6 @@ class PostsController < ApplicationController
 	end
 
 	def show
-    	@post = Post.find(params[:id])
     	respond_to do |format|
     		format.html
     		format.json { render json: @post }
@@ -34,11 +34,9 @@ class PostsController < ApplicationController
 	end
 
 	def edit
-		@post = Post.find(params[:id])
 	end
 
 	def update
-		@post = Post.find(params[:id])
 		respond_to do |format|
 			if  format.html { redirect_to @post, notice: 'Post was successfully updated.' }
 		        format.json { head :no_content }
@@ -50,16 +48,18 @@ class PostsController < ApplicationController
 	end
 
 	def delete
-		@post = Post.find(params[:id])
 	end
 
 	def destroy
-		@post = Post.find(params[:id])
 		@post.destroy
 		respond_to do |format|
       		format.html { redirect_to posts_path }
       		format.json { head :no_content }
 		end
+	end
+
+	def get_post
+		@post = Post.find(params[:id])
 	end
 
 
