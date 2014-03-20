@@ -7,7 +7,6 @@ gem 'gravatar_image_tag'
 gem 'devise'
 gem 'pg'
 gem 'redcarpet'
-gem "factory_girl_rails", "~> 4.0"
 
 # Use sqlite3 as the database for Active Record
 
@@ -45,6 +44,7 @@ group :development, :test do
   gem 'jazz_hands'
   gem 'better_errors'
   gem 'quiet_assets'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :test do
@@ -53,6 +53,8 @@ group :test do
   gem 'spork-rails'
   gem 'guard-rspec'
   gem 'webrat'
+  gem 'faker'
+  gem 'launchy'
 end
 
 group :production do
