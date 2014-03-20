@@ -1,6 +1,7 @@
 require 'spec_helper'
 
-describe "Creating a comment" do 
+describe "Creating a comment" do
+	
 
 	it "saves the comment" do 
 		post = Post.create(post_attributes)
@@ -15,4 +16,6 @@ describe "Creating a comment" do
 		expect(page).to have_text(post.comments.last.body)
 		expect(page).to have_text(post.comments.last.commenter)
 	end
+
+
 end

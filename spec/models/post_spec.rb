@@ -19,7 +19,7 @@ describe Post do
 	it "count decreases by 1 when a post is deleted" do 
 		post = Post.create!(title: 'new article', content: 'article content')
 		
-		expect { post.destroy }.to change { Post.count }.from(1).to(0) 
+		expect { post.destroy }.to change { Post.count }.from(2).to(1) 
 	end
 
 	it "responds to title" do 
