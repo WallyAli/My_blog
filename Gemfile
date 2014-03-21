@@ -48,13 +48,15 @@ group :development, :test do
 end
 
 group :test do
-  gem 'selenium-webdriver'
-  gem 'capybara'
   gem 'spork-rails'
-  gem 'guard-rspec'
+  gem 'guard', '~> 2.1'
+  gem 'guard-rspec', '~> 4.2.8'
   gem 'webrat'
-  gem 'faker'
-  gem 'launchy'
+  gem 'faker', '~> 1.3.0'
+  gem 'capybara', '~> 2.2.1'
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'launchy', '~> 2.4.2'
+  gem 'selenium-webdriver', '~> 2.40.0'
 end
 
 group :production do
