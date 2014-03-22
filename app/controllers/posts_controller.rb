@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	before_action :get_post, only: [:edit, :update, :delete, :destroy, :show]
 
 	def index
-		@posts = Post.search(params[:search])
+		@posts = Post.all
 		respond_to do |format|
     		format.html
     		format.json { render json: @posts }
