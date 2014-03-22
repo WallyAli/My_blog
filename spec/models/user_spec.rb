@@ -46,11 +46,7 @@ describe User do
     it "is invalid without a email" do 
     	user = User.new
     	user.should_not be_valid
-    end
-
-	it "email is 'abdishwak@gmail.com'" do 
-
-	end    
+    end   
 end
 
 
