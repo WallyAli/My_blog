@@ -7,6 +7,7 @@ gem 'gravatar_image_tag'
 gem 'devise'
 gem 'pg'
 gem 'redcarpet'
+gem 'twitter'
 
 # Use sqlite3 as the database for Active Record
 
