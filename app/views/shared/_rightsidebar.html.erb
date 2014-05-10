@@ -4,11 +4,9 @@
           </div>
         <h4 class="list-group-item-heading">
           Great Ruby Tutorials</h4>
+          
+            <p><%= @client.friends.first %></p>
 
-            <% @client.sample do |tweet| %>
-              <%= tweet.text %>
-            <% end %>
-            
             <p>
                  <%= link_to "Ruby Learning", "http://rubylearning.com/satishtalim/tutorial.html" %> 
             </p>
