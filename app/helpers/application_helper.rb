@@ -3,15 +3,7 @@ module ApplicationHelper
 
 	require 'rss'
 	require 'open-uri'
-	require 'twitter'
 
-	@client = Twitter::REST::Client.new do |config|
-	  config.consumer_key    = ENV["CONSUMER_KEY"]
-	  config.consumer_secret = ENV["CONSUMER_SECRET"]
-	  config.access_token        = ENV["ACCESS_TOKEN"]
-	  config.access_token_secret = ENV["ACCESS_SECRET"]
-	end
-	
 	def gravatar_for(user)
 		gravatar_id = Digest::MD5.hexdigest(user)
 	    "http://gravatar.com/avatar/#{gravatar_id}.png"
