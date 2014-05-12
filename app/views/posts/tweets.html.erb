@@ -1,3 +1,11 @@
 <div>
   <%= @client.user.username %>
 </div>
+
+<div>
+  <ol>
+  <% @client.search("to:justinbieber marry me", :result_type => "recent").take(3).collect do |tweet| %>
+  <li><%= "#{tweet.user.screen_name}: #{tweet.text}" %></li>
+   <% end %>
+  </ol>
+</div>
