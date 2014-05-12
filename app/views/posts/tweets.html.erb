@@ -1,11 +1,53 @@
-<div>
-  <%= @client.user.username %>
+
+
+<div class="wrap">
+  <div class="container panel-body">
+    <div class="row">
+
+      <div class="col-xs-6 col-sm-4">
+
+         <a class="twitter-timeline" href="https://twitter.com/KenyaMoore" data-widget-id="465723657738649601" data-tweet-limit="10">Tweets by @KenyaMoore</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+
+      <div class="col-xs-6 col-sm-4">
+
+         <a class="twitter-timeline" href="https://twitter.com/NeNeLeakes" data-widget-id="465746177724399616" data-tweet-limit="10">Tweets by @NeNeLeakes</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+
+      <div class="col-xs-6 col-sm-4">
+        <a class="twitter-timeline" href="https://twitter.com/PhaedraParks" data-widget-id="465588868905836544" data-tweet-limit="10">Tweets by @PhaedraParks</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div>
-  <ol>
-  <% @client.search("to:justinbieber marry me", :result_type => "recent").take(3).collect do |tweet| %>
-  <li><%= "#{tweet.user.screen_name}: #{tweet.text}" %></li>
-   <% end %>
-  </ol>
+
+
+<div class="wrap">
+  <div class="container panel-body">
+    <div class="row">
+
+      <div class="col-xs-6 col-sm-4">
+
+       <a class="twitter-timeline" href="https://twitter.com/Porsha4real" data-widget-id="465735397830455296" data-tweet-limit="10">Tweets by @Porsha4real</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div> 
+
+      <div class="col-xs-6 col-sm-4">
+        <a class="twitter-timeline" href="https://twitter.com/CynthiaBailey10" data-widget-id="465746177724399616" data-tweet-limit="10">Tweets by @CynthiaBailey10</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+
+      <div class="col-xs-6 col-sm-4">
+
+      </div>
+
+    </div>
+  </div>
 </div>
+
+
+
