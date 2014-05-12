@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
 
-  get "tweets/index"
+  get "/tweets", to: "posts#tweets"
   	devise_for :users
 
 	devise_scope :user do
